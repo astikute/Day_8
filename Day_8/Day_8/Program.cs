@@ -10,7 +10,7 @@ namespace Day_8
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("1. Masiva piemers \n2. Izvada zvaigznites \n3. Piecu skaitlu ievade, izvade un summesana \n4. Izeja");
+            Console.WriteLine("1. Masiva piemers \n2. Izvada zvaigznites \n3. Piecu skaitlu ievade, izvade un summesana \n4. Izeja \n");
             string izvele = "";
 
             do
@@ -28,6 +28,9 @@ namespace Day_8
                         IevadeIzvade();
                         break;
                     case "4":
+                        break;
+                    default:
+                        Console.WriteLine("Kluda! Megini velreiz!\n");
                         break;
                 }
             }
@@ -62,7 +65,7 @@ namespace Day_8
                 Console.Write(parbMasivs[j] + " ");
                 sum = sum + parbMasivs[j];
             }
-            Console.WriteLine("\nSkaitlu summa: {0}", sum);
+            Console.WriteLine("\nSkaitlu summa: {0} \n", sum);
         }
 
         static void JaunaZvaigznite()
@@ -76,6 +79,7 @@ namespace Day_8
             {
                 Console.WriteLine(zvaigznites[i]);
             }
+            Console.WriteLine();
         }
 
         static void MasivaPiemers()
@@ -88,8 +92,9 @@ namespace Day_8
 
            for (int i = 0; i<4; i++)
            {
-               Console.WriteLine(masivs[i]);
+               Console.Write(masivs[i] + " ");
            }
+            Console.WriteLine("\n");
         }
     }
 
