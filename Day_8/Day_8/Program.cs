@@ -10,10 +10,28 @@ namespace Day_8
     {
         static void Main(string[] args)
         {
-            //MasivaPiemers();
-            //JaunaZvaigznite();
-            IevadeIzvade();
-            Console.Read();
+            Console.WriteLine("1. Masiva piemers \n2. Izvada zvaigznites \n3. Piecu skaitlu ievade, izvade un summesana \n4. Izeja");
+            string izvele = "";
+
+            do
+            {
+                izvele = Console.ReadLine();
+                switch (izvele)
+                {
+                    case "1":
+                        MasivaPiemers();
+                        break;
+                    case "2":
+                        JaunaZvaigznite();
+                        break;
+                    case "3":
+                        IevadeIzvade();
+                        break;
+                    case "4":
+                        break;
+                }
+            }
+            while (izvele != "4");
         }
 
         static void IevadeIzvade()
@@ -70,7 +88,7 @@ namespace Day_8
 
            for (int i = 0; i<4; i++)
            {
-               Console.Write(masivs[i] + " ");
+               Console.WriteLine(masivs[i]);
            }
         }
     }
